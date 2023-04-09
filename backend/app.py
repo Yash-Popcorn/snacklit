@@ -14,7 +14,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-api_key = "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"
+api_key = "CANT_TELL"
 
 openai.api_key = api_key
 
@@ -23,7 +23,7 @@ def get_recipe():
     # Access parameters from the HTTP request
     # food_list = request.args.get('food_list')  # Retrieve 'food_list' parameter from the HTTP query string
     #food_list = {'url' : request.json['url']}
-    api_key = "16fa4ec880575aa78d9bded50e4d226c7b7cc47c"
+    api_key = "CANT_TELL"
     endpoint = "andreasjansson/blip-2:4b32258c42e9efd4288bb9910bc532a69727f9acd26aa08e175713a0a857a608"
     client = replicate.Client(api_token=api_key)
     image_url = request.json['url']
@@ -45,7 +45,7 @@ def get_recipe():
 @app.route('/get_info', methods=['POST'])
 def get_info():
 
-    api_key = "16fa4ec880575aa78d9bded50e4d226c7b7cc47c"
+    api_key = "CANT_TELL"
     endpoint = "andreasjansson/blip-2:4b32258c42e9efd4288bb9910bc532a69727f9acd26aa08e175713a0a857a608"
     client = replicate.Client(api_token=api_key)
     image_url = request.json['url']
@@ -85,4 +85,3 @@ def get_info():
 if __name__ == '__main__':
     app.run(port=8000, debug=True)
 
-# 5f5046ce0cad08641d362c20c0a678152d6d425b (tokencd)
